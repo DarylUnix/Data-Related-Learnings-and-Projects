@@ -50,6 +50,6 @@ select round(sqrt(avg(power(actual_value - forecast_value,2))),2) as RMSE
 from CTE3
 ;
 
-## Improvements upon research after solving:
-## to use Month() to get the month instead of substring
-## to use Lag(column,1) and Over(month) as a shortcut for the self-join-to-use-value-from-month-before part
+-- Improvements upon research after solving:
+-- to use Month() to get the month instead of substring
+-- to use Lag(column,1) and Over(month) as a shortcut for the self-join-to-use-value-from-month-before part
