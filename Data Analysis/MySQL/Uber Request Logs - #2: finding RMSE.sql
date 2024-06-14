@@ -12,7 +12,7 @@
 ## RMSE is defined as sqrt(mean(square(actual - forecast)). Report out the RMSE rounded to the 2nd decimal spot.
 
 -- I tried solving it with my own solution using the knowledge from what I studied at the university and learned online
--- It may not be the quickest solution because I only apply what I know, but I believe that I made the right solution and concluded that the correct answer
+-- It may not be the quickest solution because I only apply what I know, but I believe that I made the right solution and got the correct answer
 
 ## My Solution:
 
