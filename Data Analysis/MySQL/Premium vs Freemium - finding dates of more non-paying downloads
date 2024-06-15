@@ -49,3 +49,6 @@ join CTE4 as yes
     on no.distinct_date = yes.distinct_date)
 select * from CTE5
 where non_paying_downloads > paying_downloads;
+
+-- Improvements:
+-- usage of SUM(Case when paying_customer = "yes" THEN total_downloads END) + 'group by date' in order to aggregating data instead of splitting it into 2 tables
