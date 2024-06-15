@@ -1,4 +1,4 @@
-## Naive Forecasting by Stratascratch
+## Naive Forecasting by Uber
 ## Reference: https://platform.stratascratch.com/coding/10313-naive-forecasting?code_type=3 
 
 ## Question:
