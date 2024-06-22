@@ -48,6 +48,7 @@ group by country
 ),
 
 -- Step 4: Display the needed columns and use the formula to get the results by country
+## For some reason there is I needed to make it country_A and country_B to work because the website displays an error saying that it was a duplicate(?)
  
 CTE4 as
 (
@@ -59,4 +60,6 @@ inner join CTE3
 select * from CTE4
 ;
 
- 
+## Could have count(*) instantly at the first CTE reducing the number of steps
+## Usage of CAST to maniplulate data type
+## Usage of DateDiff in order to get the difference between dates
