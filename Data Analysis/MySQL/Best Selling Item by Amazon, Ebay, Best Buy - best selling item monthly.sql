@@ -5,6 +5,13 @@
 -- The best selling item is calculated using the formula (unitprice * quantity). 
 -- Output the month, the description of the item along with the amount paid.
 
+## My solution
+
+-- Step 1: Group it by month, and then description
+-- Step 2: Get their total invoice
+-- Step 3: Get their dense rank through total invoice by month, this will make getting top in each month more easier
+-- Step 4: Display all needed columns by month, with the condition of just showing the top of the ranks
+
 with CTE1 as
 (select month(invoicedate) as month_only, description, SUM(quantity * unitprice) as total_invoice, dense_rank() OVER(partition by month(invoicedate) order by SUM(quantity * unitprice) desc)as month_rank
 from online_retail
