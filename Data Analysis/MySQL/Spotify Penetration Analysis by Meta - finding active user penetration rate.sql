@@ -13,6 +13,10 @@
 ​-- The output should contain 'country' and 'active_user_penetration_rate' rounded to 2 decimals.
 -- Let's assume the current_day is 2024-01-31.
 
+## My first time encoutering timeframe related question, will google that after this
+## For now I'm going to use what I know and do what I can
+## Just checked other solutions and ended up with same answers. Yay!!
+
 WITH CTE1 as
 (
 select *
