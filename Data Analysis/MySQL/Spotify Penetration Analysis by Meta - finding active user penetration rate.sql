@@ -17,6 +17,8 @@
 ## For now I'm going to use what I know and do what I can
 ## Just checked other solutions and ended up with same answers. Yay!!
 
+-- Step 1: Get the records of active users using the appropriate conditions
+
 WITH CTE1 as
 (
 select *
@@ -26,18 +28,27 @@ month(last_active_date) = 1 AND
 sessions >= 5 AND
 listening_hours >= 10
 ),
+
+-- Step 2: Get the number of active users by country
+ 
 CTE2 as
 (
 select country as country_A, count(*) as active_users 
 from CTE1
 group by country
 ),
+
+-- Step 3: Get the number of all users by country
+ 
 CTE3 as
 (
 select country as country_B, count(*) as total_users 
 from penetration_analysis
 group by country
 ),
+
+-- Step 4: Display the needed columns and use the formula to get the results by country
+ 
 CTE4 as
 (
 select country_A as country, round((active_users/total_users),2) as active_user_pentration_rate
@@ -47,3 +58,5 @@ inner join CTE3
 )
 select * from CTE4
 ;
+
+ 
